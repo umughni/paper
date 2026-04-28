@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "extraKnownMarketplaces": {
+    "paper-design": {
+      "source": {
+        "source": "github",
+        "repo": "paper-design/agent-plugins"
+      }
+    }
+  }
+}
