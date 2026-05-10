@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>Junny Skin Tint Flawless - Meta CPAS Square</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #2a2a2a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* ===== 1080x1080 Meta CPAS canvas ===== */
+  .canvas {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 20% 25%, #ffd9c2 0%, transparent 45%),
+      radial-gradient(circle at 80% 30%, #f7c9d9 0%, transparent 45%),
+      radial-gradient(circle at 50% 90%, #e7d4f0 0%, transparent 50%),
+      linear-gradient(135deg, #fff3ea 0%, #fde4ec 50%, #efe1f5 100%);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+  }
+
+  /* soft sparkle overlay */
+  .canvas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(2px 2px at 12% 20%, #fff 50%, transparent 60%),
+      radial-gradient(2px 2px at 88% 14%, #fff 50%, transparent 60%),
+      radial-gradient(1.5px 1.5px at 30% 78%, #fff 50%, transparent 60%),
+      radial-gradient(1.5px 1.5px at 72% 84%, #fff 50%, transparent 60%);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  /* ===== TOP BAR : brand + new arrival ===== */
+  .brand {
+    position: absolute;
+    top: 56px;
+    left: 60px;
+    z-index: 5;
+  }
+  .brand .logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .brand .logo .j  { color: #6b3df0; }
+  .brand .logo .u1 { color: #ff7a3d; }
+  .brand .logo .n1 { color: #ff7a3d; }
+  .brand .logo .n2 { color: #6b3df0; }
+  .brand .logo .y  { color: #ff7a3d; }
+
+  .product-title {
+    margin-top: 6px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.02;
+    color: #4a2bb3;
+    letter-spacing: -0.5px;
+  }
+  .product-tag {
+    margin-top: 14px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #5a4a6e;
+    letter-spacing: 0.2px;
+  }
+
+  /* NEW ARRIVAL ribbon */
+  .new-arrival {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: #4a2bb3;
+    color: #fff;
+    padding: 16px 26px;
+    border-radius: 14px;
+    transform: rotate(6deg);
+    box-shadow: 0 10px 22px rgba(74,43,179,0.35);
+    z-index: 6;
+  }
+  .new-arrival::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 22px;
+    width: 0; height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 12px solid #4a2bb3;
+    transform: rotate(-12deg);
+  }
+  .new-arrival .small  { font-size: 14px; font-weight: 600; letter-spacing: 2px; opacity: 0.85; }
+  .new-arrival .big    { font-size: 30px; font-weight: 800; letter-spacing: 2px; line-height: 1; }
+
+  /* ===== PRODUCT (left mid) ===== */
+  .product-area {
+    position: absolute;
+    left: 30px;
+    top: 360px;
+    width: 540px;
+    height: 560px;
+  }
+
+  .product-mock {
+    position: absolute;
+    left: 130px;
+    top: 30px;
+    width: 250px;
+    height: 470px;
+    background: linear-gradient(180deg, #f3d4b4 0%, #e2b48a 70%, #c98756 100%);
+    border-radius: 32px 32px 18px 18px;
+    box-shadow: 0 30px 50px rgba(160, 100, 50, 0.25), inset -20px 0 40px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    color: #4a2bb3;
+  }
+  /* tube cap */
+  .product-mock::after {
+    content: "";
+    position: absolute;
+    bottom: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(180deg, #d96a2d, #a8431a);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 14px 24px rgba(0,0,0,0.2);
+  }
+  .product-mock .brand-mini {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .product-mock .brand-mini .o { color: #ff7a3d; }
+  .product-mock .ml1 { font-size: 20px; font-weight: 600; margin-top: 14px; letter-spacing: 0.5px; }
+  .product-mock .ml2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .product-mock .glow-pill {
+    margin-top: 16px;
+    background: #efe1f5;
+    color: #4a2bb3;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  .product-mock .desc {
+    margin-top: 18px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 600;
+    padding: 0 16px;
+  }
+  .product-mock .skinline { font-style: italic; font-size: 11px; margin-top: 18px; opacity: 0.85; }
+  .product-mock .vol {
+    margin-top: auto;
+    margin-bottom: 24px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* USP callouts around product */
+  .usp {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a2bb3;
+    text-align: center;
+    line-height: 1.25;
+  }
+  .usp.left  { left: 0;   top: 250px; width: 150px; }
+  .usp.right { right: 0;  top: 240px; width: 170px; }
+
+  .usp .arrow {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 6px;
+  }
+
+  .sparkle {
+    position: absolute;
+    color: #ffb347;
+    font-size: 24px;
+  }
+  .sparkle.s1 { left: 20px;  top: 200px; }
+  .sparkle.s2 { right: 30px; top: 200px; color: #ff7a3d; }
+  .sparkle.s3 { left: 90px;  top: 480px; color: #ffb347; }
+
+  /* ===== VIDEO placeholder (right mid) ===== */
+  .video-frame {
+    position: absolute;
+    right: 60px;
+    top: 280px;
+    width: 360px;
+    height: 640px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #4a4a4a 100%);
+    border-radius: 36px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    overflow: hidden;
+    border: 8px solid #fff;
+  }
+  .video-frame::before {
+    content: "VIDEO PLACEHOLDER";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+  /* progress bar (story style) */
+  .vf-progress {
+    position: absolute;
+    top: 18px; left: 18px; right: 18px;
+    display: flex;
+    gap: 4px;
+    z-index: 2;
+  }
+  .vf-progress span {
+    flex: 1;
+    height: 3px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 2px;
+  }
+  .vf-progress span.on { background: #fff; }
+
+  .vf-live {
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    background: #fff;
+    color: #ff3d6e;
+    border-radius: 999px;
+    padding: 6px 12px 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 13px;
+    z-index: 2;
+  }
+  .vf-live .dot {
+    width: 18px; height: 18px;
+    background: #ff3d6e;
+    color: #fff;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .play-btn {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px; height: 78px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    display: grid; place-items: center;
+    z-index: 2;
+  }
+  .play-btn::after {
+    content: "";
+    width: 0; height: 0;
+    border-left: 22px solid #fff;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    margin-left: 6px;
+  }
+
+  .vf-actions {
+    position: absolute;
+    right: 14px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    color: #fff;
+    z-index: 2;
+  }
+  .vf-actions .ic {
+    width: 36px; height: 36px;
+    display: grid; place-items: center;
+    font-size: 22px;
+  }
+  .vf-input {
+    position: absolute;
+    left: 18px; right: 78px;
+    bottom: 22px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(255,255,255,0.55);
+    z-index: 2;
+  }
+
+  /* certification badges */
+  .badges {
+    position: absolute;
+    left: -34px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3;
+  }
+  .badge {
+    width: 78px; height: 78px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    display: grid; place-items: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: #ff3d6e;
+    text-align: center;
+    line-height: 1.1;
+    border: 2px solid #ffd0dc;
+    padding: 4px;
+  }
+  .badge.spf    { color: #ff3d6e; }
+  .badge.derm   { color: #6b3df0; border-color: #d8c8f5; }
+  .badge.halal  { background: #1a6b3f; color: #fff; border-color: #1a6b3f; font-size: 10px; }
+
+  /* ===== BOTTOM BAR : discount + cta ===== */
+  .bottom {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    height: 160px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 4;
+  }
+
+  .deal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .deal .label {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    line-height: 1;
+    color: #4a2bb3;
+    font-weight: 700;
+    max-width: 180px;
+  }
+  .discount-badge {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ff5b3d, #d8331a);
+    color: #fff;
+    display: grid; place-items: center;
+    box-shadow: 0 12px 24px rgba(216,51,26,0.4);
+    transform: rotate(-8deg);
+    border: 4px solid #fff;
+    text-align: center;
+  }
+  .discount-badge .pct  { font-size: 32px; font-weight: 800; line-height: 1; }
+  .discount-badge .off  { font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+
+  .price-card {
+    background: #fff;
+    border: 3px solid #ffb347;
+    border-radius: 18px;
+    padding: 12px 22px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .price-card .old {
+    font-size: 22px;
+    color: #b3b3b3;
+    text-decoration: line-through;
+    text-decoration-color: #ff3d3d;
+    text-decoration-thickness: 2px;
+    font-weight: 600;
+  }
+  .price-card .new {
+    background: #4a2bb3;
+    color: #fff;
+    padding: 4px 18px;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .cta .sold {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: #4a2bb3;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.2;
+  }
+  .shop-now {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .shop-now .btn {
+    background: linear-gradient(135deg, #ff8a4d, #d94a1a);
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 14px 24px 14px 28px;
+    border-radius: 999px 0 0 999px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 22px rgba(217,74,26,0.4);
+  }
+  .shop-now .btn .cart {
+    width: 28px; height: 28px;
+    background: #fff;
+    color: #d94a1a;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 14px;
+  }
+  .shop-now .shopee {
+    background: #ee4d2d;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 0 999px 999px 0;
+    font-weight: 800;
+    font-size: 18px;
+    box-shadow: 0 10px 22px rgba(238,77,45,0.45);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .shop-now .shopee .s {
+    width: 22px; height: 22px;
+    background: #fff;
+    color: #ee4d2d;
+    border-radius: 6px;
+    display: grid; place-items: center;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  /* helpers */
+  .hand-arrow {
+    stroke: #4a2bb3;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+
+    <!-- BRAND + TITLE -->
+    <div class="brand">
+      <div class="logo">
+        <span class="j">J</span><span class="u1">u</span><span class="n1">n</span><span class="n2">n</span><span class="y">y</span>
+      </div>
+      <div class="product-title">Skin Tint<br/>Perfecting Flawless</div>
+      <div class="product-tag">Glow Drops, Effortless Flawless Look</div>
+    </div>
+
+    <!-- NEW ARRIVAL -->
+    <div class="new-arrival">
+      <div class="small">★ NEW</div>
+      <div class="big">ARRIVAL</div>
+    </div>
+
+    <!-- PRODUCT AREA -->
+    <div class="product-area">
+      <span class="sparkle s1">✦</span>
+      <span class="sparkle s2">✦</span>
+      <span class="sparkle s3">✧</span>
+
+      <!-- product mock -->
+      <div class="product-mock">
+        <div class="brand-mini">J<span class="o">u</span>nny</div>
+        <div class="ml1">Skin Tint</div>
+        <div class="ml2">Perfecting<br/>Flawless</div>
+        <div class="glow-pill">Glow drops</div>
+        <div class="desc">Brightening &amp;<br/>Effortless Glow Formula</div>
+        <div class="skinline">for all skin types</div>
+        <div class="vol">30gr · 1.01 fl oz</div>
+      </div>
+
+      <!-- USP left -->
+      <div class="usp left">
+        <svg class="arrow" viewBox="0 0 60 60">
+          <path class="hand-arrow" d="M55 5 C 30 15, 15 35, 12 55"/>
+          <path class="hand-arrow" d="M12 55 L 22 50"/>
+          <path class="hand-arrow" d="M12 55 L 17 45"/>
+        </svg>
+        Easy Blend<br/>No Whitecast
+      </div>
+
+      <!-- USP right -->
+      <div class="usp right">
+        <svg class="arrow" viewBox="0 0 60 60">
+          <path class="hand-arrow" d="M5 5 C 30 15, 45 35, 48 55"/>
+          <path class="hand-arrow" d="M48 55 L 38 50"/>
+          <path class="hand-arrow" d="M48 55 L 43 45"/>
+        </svg>
+        Anti Brudul<br/>&amp; No Greasy
+      </div>
+    </div>
+
+    <!-- VIDEO PLACEHOLDER -->
+    <div class="video-frame">
+      <div class="vf-progress">
+        <span class="on"></span><span class="on"></span><span></span><span></span>
+      </div>
+      <div class="vf-live">
+        <span class="dot">J</span> LIVE
+      </div>
+      <div class="play-btn"></div>
+      <div class="vf-actions">
+        <div class="ic">♡</div>
+        <div class="ic">▷</div>
+      </div>
+      <div class="vf-input"></div>
+    </div>
+
+    <!-- BADGES -->
+    <div class="badges">
+      <div class="badge"><div>ALL DAY<br/>HYDRATION</div></div>
+      <div class="badge spf"><div>SPF<br/>40+<br/><span style="font-size:7px;">CERTIFIED</span></div></div>
+      <div class="badge derm"><div>DERMATOLOGY<br/>TESTED</div></div>
+      <div class="badge halal"><div>HALAL<br/>INDONESIA</div></div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottom">
+      <div class="deal">
+        <div class="label">dapatkan harga<br/>Diskon Di Sini:</div>
+        <div class="discount-badge">
+          <div>
+            <div class="pct">45%</div>
+            <div class="off">OFF</div>
+          </div>
+        </div>
+        <div class="price-card">
+          <div class="old">53.000</div>
+          <div class="new">29.150</div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <div class="sold">Sudah Terkirim 100rb packs<br/>dalam 3 bulan</div>
+        <div class="shop-now">
+          <div class="btn"><span class="cart">🛒</span> SHOP NOW</div>
+          <div class="shopee"><span class="s">S</span> Shopee</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
