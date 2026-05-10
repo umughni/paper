@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bening — Facial Wash untuk Kulit yang Bernafas</title>
+<style>
+  :root {
+    --cream: #f7f3ec;
+    --sand: #ece4d6;
+    --moss: #4a5d3a;
+    --moss-dark: #2f3d25;
+    --rose: #d9a8a0;
+    --ink: #1c1c1a;
+    --muted: #6b6b66;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(247, 243, 236, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .logo::after {
+    content: '°';
+    color: var(--moss);
+  }
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--moss); }
+  .nav-cta {
+    background: var(--moss);
+    color: var(--cream) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+  }
+  .nav-cta:hover { background: var(--moss-dark); color: var(--cream); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 3rem 4rem;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 20%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(74,93,58,0.08), transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--moss);
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--moss);
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--moss);
+  }
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 460px;
+    margin-bottom: 2.5rem;
+  }
+  .cta-row { display: flex; gap: 1rem; align-items: center; }
+  .btn {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn:hover { background: var(--moss); transform: translateY(-2px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    text-decoration: underline;
+    padding: 1rem 0;
+  }
+  .btn-ghost:hover { background: transparent; color: var(--moss); transform: none; }
+
+  /* PRODUCT VISUAL */
+  .product-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+  }
+  .product-bg {
+    position: absolute;
+    width: 380px; height: 380px;
+    background: var(--sand);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .bottle {
+    position: relative;
+    width: 180px;
+    height: 380px;
+    z-index: 1;
+    filter: drop-shadow(0 30px 40px rgba(0,0,0,0.15));
+  }
+  .bottle-cap {
+    width: 80px; height: 50px;
+    background: linear-gradient(180deg, var(--moss-dark), var(--moss));
+    margin: 0 auto;
+    border-radius: 8px 8px 4px 4px;
+  }
+  .bottle-neck {
+    width: 60px; height: 25px;
+    background: var(--moss);
+    margin: 0 auto;
+  }
+  .bottle-body {
+    width: 180px;
+    height: 305px;
+    background: linear-gradient(135deg, #fafaf6 0%, #ebe5d6 100%);
+    border-radius: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.2rem;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .bottle-body::before {
+    content: '';
+    position: absolute;
+    top: 12px; left: 12px;
+    width: 35%; height: 60%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), transparent);
+    border-radius: 8px;
+  }
+  .bottle-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--moss-dark);
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.05em;
+  }
+  .bottle-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+  .bottle-divider {
+    width: 30px; height: 1px;
+    background: var(--moss);
+    margin-bottom: 1rem;
+  }
+  .bottle-desc {
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .bottle-vol {
+    position: absolute;
+    bottom: 1.2rem;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+  }
+  .floating-label {
+    position: absolute;
+    background: var(--cream);
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.04);
+    z-index: 2;
+  }
+  .floating-label.tl { top: 15%; left: 5%; }
+  .floating-label.br { bottom: 18%; right: 5%; }
+  .floating-label .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--moss);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+
+  /* SECTIONS */
+  section { padding: 6rem 3rem; }
+  .section-head {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+  .section-head .eyebrow { margin-bottom: 1rem; }
+  .section-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .section-head h2 em { font-style: italic; color: var(--moss); }
+  .section-head p { color: var(--muted); }
+
+  /* BENEFITS */
+  .benefits {
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .benefits .eyebrow { color: var(--rose); border-color: var(--rose); }
+  .benefits h2 em { color: var(--rose); }
+  .benefits p { color: rgba(247,243,236,0.6); }
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .benefit {
+    padding: 2rem;
+    border-top: 1px solid rgba(247,243,236,0.15);
+    transition: border-color 0.3s;
+  }
+  .benefit:hover { border-top-color: var(--rose); }
+  .benefit-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--rose);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+  .benefit h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+  .benefit p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* INGREDIENTS */
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .ingredient {
+    background: var(--cream);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s;
+  }
+  .ingredient:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  }
+  .ingredient-icon {
+    width: 60px; height: 60px;
+    background: var(--sand);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .ingredient h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .ingredient .latin {
+    font-size: 0.75rem;
+    color: var(--moss);
+    font-style: italic;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .ingredient p {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* RITUAL */
+  .ritual { background: var(--sand); }
+  .ritual-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .step {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px; right: -20px;
+    width: 40px; height: 1px;
+    background: var(--moss);
+    opacity: 0.3;
+  }
+  .step-num {
+    width: 60px; height: 60px;
+    background: var(--cream);
+    border: 1px solid var(--moss);
+    color: var(--moss);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+  }
+  .step h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .step p { font-size: 0.9rem; color: var(--muted); }
+
+  /* TESTIMONIALS */
+  .testimonials-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .testimonial {
+    background: var(--cream);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .stars {
+    color: var(--rose);
+    letter-spacing: 0.2em;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+  }
+  .testimonial blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+    font-style: italic;
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--moss);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+  }
+  .author-info strong { display: block; font-size: 0.9rem; font-weight: 500; }
+  .author-info span { font-size: 0.75rem; color: var(--muted); }
+
+  /* CTA FINAL */
+  .cta-final {
+    background: var(--moss);
+    color: var(--cream);
+    text-align: center;
+    padding: 8rem 3rem;
+  }
+  .cta-final h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .cta-final h2 em { font-style: italic; color: var(--rose); }
+  .cta-final p {
+    color: rgba(247,243,236,0.7);
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+  }
+  .cta-final .btn {
+    background: var(--cream);
+    color: var(--ink);
+  }
+  .cta-final .btn:hover {
+    background: var(--rose);
+    color: var(--cream);
+  }
+  .price-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .price-tag .strike {
+    text-decoration: line-through;
+    color: rgba(247,243,236,0.4);
+    font-size: 0.95rem;
+  }
+  .price-tag .now {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--cream);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(247,243,236,0.6);
+    padding: 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(247,243,236,0.08);
+  }
+  footer .logo {
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  footer p { margin-bottom: 0.5rem; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { display: none; }
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 7rem 1.5rem 3rem;
+      text-align: center;
+    }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .cta-row { justify-content: center; }
+    .product-stage { min-height: 400px; }
+    .product-bg { width: 300px; height: 300px; }
+    .floating-label.tl { left: 0; }
+    .floating-label.br { right: 0; }
+    section { padding: 4rem 1.5rem; }
+    .benefit-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .benefit { padding: 1.5rem 1rem; }
+    .ingredients-grid { grid-template-columns: 1fr; }
+    .ritual-steps { grid-template-columns: 1fr 1fr; gap: 2rem 1rem; }
+    .step:not(:last-child)::after { display: none; }
+    .testimonials-row { grid-template-columns: 1fr; }
+    .cta-final { padding: 5rem 1.5rem; }
+  }
+
+  @media (max-width: 500px) {
+    .benefit-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="logo">bening</div>
+  <ul>
+    <li><a href="#benefits">Manfaat</a></li>
+    <li><a href="#ingredients">Bahan</a></li>
+    <li><a href="#ritual">Ritual</a></li>
+    <li><a href="#reviews">Ulasan</a></li>
+    <li><a href="#order" class="nav-cta">Beli Sekarang</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-content reveal">
+    <span class="eyebrow">Gentle Daily Cleanser</span>
+    <h1>Kulit yang <em>bernafas</em>, setiap hari.</h1>
+    <p>Facial wash dengan formula 98% bahan alami. Membersihkan tanpa menarik, melembabkan tanpa berat. Untuk kulit yang sehat dari dalam.</p>
+    <div class="cta-row">
+      <a href="#order" class="btn">Mulai Ritualmu</a>
+      <a href="#ingredients" class="btn btn-ghost">Lihat Komposisi →</a>
+    </div>
+  </div>
+
+  <div class="product-stage reveal">
+    <div class="product-bg"></div>
+    <div class="floating-label tl"><span class="dot"></span>pH 5.5 Balanced</div>
+    <div class="floating-label br"><span class="dot"></span>Cruelty Free</div>
+    <div class="bottle">
+      <div class="bottle-cap"></div>
+      <div class="bottle-neck"></div>
+      <div class="bottle-body">
+        <div class="bottle-label">bening</div>
+        <div class="bottle-sub">Daily Ritual</div>
+        <div class="bottle-divider"></div>
+        <div class="bottle-desc">Gentle<br>Facial Wash<br>with Centella</div>
+        <div class="bottle-vol">150 ML / 5 FL OZ</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="benefits" id="benefits">
+  <div class="section-head reveal">
+    <span class="eyebrow">Mengapa Bening</span>
+    <h2>Empat janji, <em>satu botol</em>.</h2>
+    <p>Setiap formula dirancang dengan dermatologis untuk hasil yang lembut tapi nyata.</p>
+  </div>
+  <div class="benefit-grid">
+    <div class="benefit reveal">
+      <div class="benefit-num">— 01</div>
+      <h3>Membersihkan Dalam</h3>
+      <p>Mengangkat sebum, polusi, dan sisa make-up tanpa mengganggu skin barrier.</p>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">— 02</div>
+      <h3>Tetap Lembab</h3>
+      <p>Hyaluronic acid + glycerin menjaga kelembaban natural setelah cuci muka.</p>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">— 03</div>
+      <h3>Menenangkan</h3>
+      <p>Centella asiatica meredakan kemerahan dan iritasi pada kulit sensitif.</p>
+    </div>
+    <div class="benefit reveal">
+      <div class="benefit-num">— 04</div>
+      <h3>Bebas Risiko</h3>
+      <p>Tanpa SLS, alkohol, paraben, dan pewangi sintetis. Aman untuk pemakaian harian.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ingredients">
+  <div class="section-head reveal">
+    <span class="eyebrow">Komposisi</span>
+    <h2>Tiga bahan <em>pahlawan</em>.</h2>
+    <p>Kami percaya pada formulasi yang transparan. Setiap bahan punya tujuan, setiap molekul terukur.</p>
+  </div>
+  <div class="ingredients-grid">
+    <div class="ingredient reveal">
+      <div class="ingredient-icon">🌿</div>
+      <h3>Centella</h3>
+      <span class="latin">Centella asiatica</span>
+      <p>Dikenal sebagai "tiger grass", menenangkan kulit yang teriritasi dan mempercepat regenerasi sel.</p>
+    </div>
+    <div class="ingredient reveal">
+      <div class="ingredient-icon">💧</div>
+      <h3>Hyaluronic Acid</h3>
+      <span class="latin">Sodium hyaluronate</span>
+      <p>Molekul yang dapat menahan air hingga 1000x beratnya, menjaga kulit tetap kenyal dan terhidrasi.</p>
+    </div>
+    <div class="ingredient reveal">
+      <div class="ingredient-icon">🍃</div>
+      <h3>Green Tea</h3>
+      <span class="latin">Camellia sinensis</span>
+      <p>Antioksidan tinggi yang melawan radikal bebas dan polusi udara setiap hari.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ritual" id="ritual">
+  <div class="section-head reveal">
+    <span class="eyebrow">Ritual Harian</span>
+    <h2>Empat langkah, <em>dua menit</em>.</h2>
+    <p>Sederhana, mindful, efektif.</p>
+  </div>
+  <div class="ritual-steps">
+    <div class="step reveal">
+      <div class="step-num">I</div>
+      <h3>Basahi</h3>
+      <p>Bilas wajah dengan air hangat untuk membuka pori.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">II</div>
+      <h3>Aplikasikan</h3>
+      <p>Tuang seukuran kacang, busakan di telapak tangan.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">III</div>
+      <h3>Pijat</h3>
+      <p>Gerakan melingkar selama 30 detik, hindari area mata.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">IV</div>
+      <h3>Bilas</h3>
+      <p>Bersihkan dengan air dingin untuk menutup pori.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head reveal">
+    <span class="eyebrow">Suara Mereka</span>
+    <h2>Bukti dari yang <em>merasakan</em>.</h2>
+    <p>Lebih dari 12.000 pengguna telah memulai ritual mereka.</p>
+  </div>
+  <div class="testimonials-row">
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Kulitku biasanya kering setelah cuci muka, tapi pakai Bening rasanya tetap lembut. Ga ketarik sama sekali."</blockquote>
+      <div class="author">
+        <div class="avatar">A</div>
+        <div class="author-info">
+          <strong>Annisa P.</strong>
+          <span>Pengguna 3 bulan</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Wanginya soft, ga bikin pusing. Yang penting kulit sensitifku ga reaktif. Ini akan jadi staple aku."</blockquote>
+      <div class="author">
+        <div class="avatar">D</div>
+        <div class="author-info">
+          <strong>Dimas R.</strong>
+          <span>Pengguna 6 bulan</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial reveal">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <blockquote>"Tekstur gel-nya enak banget, busanya ga banyak tapi bersihnya kerasa. Glow-up dalam 2 minggu."</blockquote>
+      <div class="author">
+        <div class="avatar">K</div>
+        <div class="author-info">
+          <strong>Kirana M.</strong>
+          <span>Pengguna 2 bulan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="order">
+  <div class="reveal">
+    <h2>Mulai ritualmu <em>hari ini</em>.</h2>
+    <p>Pemesanan pertama mendapat free travel size + free shipping ke seluruh Indonesia.</p>
+    <div class="price-tag">
+      <span class="strike">Rp 189.000</span>
+      <span class="now">Rp 149.000</span>
+    </div>
+    <div>
+      <a href="#" class="btn" onclick="event.preventDefault(); alert('Terima kasih! Pemesanan akan segera tersedia.');">Pesan Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">bening</div>
+  <p>Made with care in Bandung, Indonesia.</p>
+  <p>© 2026 Bening Skincare. All rights reserved.</p>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
