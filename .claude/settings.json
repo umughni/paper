@@ -7,5 +7,18 @@
         "repo": "paper-design/agent-plugins"
       }
     }
+  },
+  "permissions": {
+    "allow": [
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__balance",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__job_display",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__list_workspaces",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__models_explore",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__show_characters",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__show_generations",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__show_marketing_studio",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__show_medias",
+      "mcp__0582e5fe-7a7a-47d7-a783-eae7d46f115b__transactions"
+    ]
   }
 }
