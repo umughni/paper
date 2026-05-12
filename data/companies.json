@@ -1,0 +1,202 @@
+[
+  {
+    "code": "BBCA",
+    "name": "Bank Central Asia Tbk.",
+    "listingDate": "2000-05-31",
+    "sector": "Keuangan",
+    "subSector": "Bank",
+    "board": "Utama",
+    "shares": 123275000000,
+    "logo": ""
+  },
+  {
+    "code": "BBRI",
+    "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+    "listingDate": "2003-11-10",
+    "sector": "Keuangan",
+    "subSector": "Bank",
+    "board": "Utama",
+    "shares": 151559000000,
+    "logo": ""
+  },
+  {
+    "code": "BMRI",
+    "name": "Bank Mandiri (Persero) Tbk.",
+    "listingDate": "2003-07-14",
+    "sector": "Keuangan",
+    "subSector": "Bank",
+    "board": "Utama",
+    "shares": 93333330000,
+    "logo": ""
+  },
+  {
+    "code": "TLKM",
+    "name": "Telkom Indonesia (Persero) Tbk.",
+    "listingDate": "1995-11-14",
+    "sector": "Infrastruktur",
+    "subSector": "Telekomunikasi",
+    "board": "Utama",
+    "shares": 99062216600,
+    "logo": ""
+  },
+  {
+    "code": "ASII",
+    "name": "Astra International Tbk.",
+    "listingDate": "1990-04-04",
+    "sector": "Perindustrian",
+    "subSector": "Konglomerasi",
+    "board": "Utama",
+    "shares": 40483553140,
+    "logo": ""
+  },
+  {
+    "code": "UNVR",
+    "name": "Unilever Indonesia Tbk.",
+    "listingDate": "1982-01-11",
+    "sector": "Barang Konsumen Primer",
+    "subSector": "Produk Rumah Tangga",
+    "board": "Utama",
+    "shares": 38150000000,
+    "logo": ""
+  },
+  {
+    "code": "GOTO",
+    "name": "GoTo Gojek Tokopedia Tbk.",
+    "listingDate": "2022-04-11",
+    "sector": "Teknologi",
+    "subSector": "Aplikasi & Jasa Internet",
+    "board": "Utama",
+    "shares": 1184362299237,
+    "logo": ""
+  },
+  {
+    "code": "BREN",
+    "name": "Barito Renewables Energy Tbk.",
+    "listingDate": "2023-10-09",
+    "sector": "Infrastruktur",
+    "subSector": "Listrik",
+    "board": "Utama",
+    "shares": 133779789750,
+    "logo": ""
+  },
+  {
+    "code": "AMMN",
+    "name": "Amman Mineral Internasional Tbk.",
+    "listingDate": "2023-07-07",
+    "sector": "Barang Baku",
+    "subSector": "Logam & Mineral",
+    "board": "Utama",
+    "shares": 72557097400,
+    "logo": ""
+  },
+  {
+    "code": "ADRO",
+    "name": "Adaro Energy Indonesia Tbk.",
+    "listingDate": "2008-07-16",
+    "sector": "Energi",
+    "subSector": "Batu Bara",
+    "board": "Utama",
+    "shares": 31985962000,
+    "logo": ""
+  },
+  {
+    "code": "ICBP",
+    "name": "Indofood CBP Sukses Makmur Tbk.",
+    "listingDate": "2010-10-07",
+    "sector": "Barang Konsumen Primer",
+    "subSector": "Makanan Olahan",
+    "board": "Utama",
+    "shares": 11661908000,
+    "logo": ""
+  },
+  {
+    "code": "ANTM",
+    "name": "Aneka Tambang Tbk.",
+    "listingDate": "1997-11-27",
+    "sector": "Barang Baku",
+    "subSector": "Logam & Mineral",
+    "board": "Utama",
+    "shares": 24030764725,
+    "logo": ""
+  },
+  {
+    "code": "PGAS",
+    "name": "Perusahaan Gas Negara Tbk.",
+    "listingDate": "2003-12-15",
+    "sector": "Energi",
+    "subSector": "Minyak, Gas & Batu Bara",
+    "board": "Utama",
+    "shares": 24241508196,
+    "logo": ""
+  },
+  {
+    "code": "MDKA",
+    "name": "Merdeka Copper Gold Tbk.",
+    "listingDate": "2015-06-19",
+    "sector": "Barang Baku",
+    "subSector": "Logam & Mineral",
+    "board": "Utama",
+    "shares": 24475992789,
+    "logo": ""
+  },
+  {
+    "code": "CPIN",
+    "name": "Charoen Pokphand Indonesia Tbk.",
+    "listingDate": "1991-03-18",
+    "sector": "Barang Konsumen Primer",
+    "subSector": "Produk Peternakan",
+    "board": "Utama",
+    "shares": 16398000000,
+    "logo": ""
+  },
+  {
+    "code": "INKP",
+    "name": "Indah Kiat Pulp & Paper Tbk.",
+    "listingDate": "1990-07-16",
+    "sector": "Barang Baku",
+    "subSector": "Kertas",
+    "board": "Utama",
+    "shares": 5470982941,
+    "logo": ""
+  },
+  {
+    "code": "KLBF",
+    "name": "Kalbe Farma Tbk.",
+    "listingDate": "1991-07-30",
+    "sector": "Kesehatan",
+    "subSector": "Farmasi",
+    "board": "Utama",
+    "shares": 46875122110,
+    "logo": ""
+  },
+  {
+    "code": "SMGR",
+    "name": "Semen Indonesia (Persero) Tbk.",
+    "listingDate": "1991-07-08",
+    "sector": "Barang Baku",
+    "subSector": "Semen",
+    "board": "Utama",
+    "shares": 6717800000,
+    "logo": ""
+  },
+  {
+    "code": "UNTR",
+    "name": "United Tractors Tbk.",
+    "listingDate": "1989-09-19",
+    "sector": "Perindustrian",
+    "subSector": "Alat Berat",
+    "board": "Utama",
+    "shares": 3730135136,
+    "logo": ""
+  },
+  {
+    "code": "BBNI",
+    "name": "Bank Negara Indonesia (Persero) Tbk.",
+    "listingDate": "1996-11-25",
+    "sector": "Keuangan",
+    "subSector": "Bank",
+    "board": "Utama",
+    "shares": 37297000000,
+    "logo": ""
+  }
+]

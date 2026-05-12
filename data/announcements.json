@@ -1,0 +1,132 @@
+[
+  {
+    "id": "SAMPLE-2026-05-11-1",
+    "title": "Penjelasan atas Pemberitaan Media Massa",
+    "publishDate": "2026-05-11T09:00:00",
+    "company": "BBRI",
+    "type": "Pengumuman",
+    "attachments": [
+      {
+        "name": "BBRI_1.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-2",
+    "title": "Laporan Penggunaan Dana Hasil Penawaran Umum",
+    "publishDate": "2026-05-11T10:07:00",
+    "company": "TLKM",
+    "type": "Laporan",
+    "attachments": [
+      {
+        "name": "TLKM_2.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-3",
+    "title": "Pelaksanaan Pembelian Kembali Saham (Buyback)",
+    "publishDate": "2026-05-11T11:14:00",
+    "company": "GOTO",
+    "type": "Aksi Korporasi",
+    "attachments": [
+      {
+        "name": "GOTO_3.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-4",
+    "title": "Pemberitahuan Jadwal Pembayaran Dividen Tunai",
+    "publishDate": "2026-05-11T12:21:00",
+    "company": "ASII",
+    "type": "Dividen",
+    "attachments": [
+      {
+        "name": "ASII_4.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-5",
+    "title": "Hasil Rapat Umum Pemegang Saham Tahunan",
+    "publishDate": "2026-05-11T13:28:00",
+    "company": "BMRI",
+    "type": "RUPS",
+    "attachments": [
+      {
+        "name": "BMRI_5.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-6",
+    "title": "Keterbukaan Informasi Pemecahan Saham (Stock Split)",
+    "publishDate": "2026-05-11T14:35:00",
+    "company": "BBCA",
+    "type": "Aksi Korporasi",
+    "attachments": [
+      {
+        "name": "BBCA_6.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-7",
+    "title": "Laporan Bulanan Registrasi Pemegang Efek",
+    "publishDate": "2026-05-11T15:42:00",
+    "company": "ANTM",
+    "type": "Laporan",
+    "attachments": [
+      {
+        "name": "ANTM_7.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-8",
+    "title": "Penyampaian Bukti Iklan Ringkasan Risalah RUPST",
+    "publishDate": "2026-05-11T16:49:00",
+    "company": "ADRO",
+    "type": "RUPS",
+    "attachments": [
+      {
+        "name": "ADRO_8.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-9",
+    "title": "Perubahan Pengurus Perseroan",
+    "publishDate": "2026-05-11T09:56:00",
+    "company": "UNVR",
+    "type": "Pengumuman",
+    "attachments": [
+      {
+        "name": "UNVR_9.pdf",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "id": "SAMPLE-2026-05-11-10",
+    "title": "Penambahan Modal Tanpa Hak Memesan Efek Terlebih Dahulu",
+    "publishDate": "2026-05-11T10:03:00",
+    "company": "MDKA",
+    "type": "Aksi Korporasi",
+    "attachments": [
+      {
+        "name": "MDKA_10.pdf",
+        "url": ""
+      }
+    ]
+  }
+]

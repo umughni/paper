@@ -1,0 +1,11 @@
+{
+  "lastUpdated": "2026-05-12T14:38:30.227Z",
+  "tradingDate": "2026-05-11",
+  "source": "mock",
+  "counts": {
+    "companies": 20,
+    "stockSummary": 20,
+    "indices": 8,
+    "announcements": 10
+  }
+}

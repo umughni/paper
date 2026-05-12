@@ -1,0 +1,98 @@
+[
+  {
+    "code": "COMPOSITE",
+    "name": "IHSG (Indeks Harga Saham Gabungan)",
+    "last": 7256.525,
+    "change": 6.525,
+    "changePercent": 0.09,
+    "high": 7285.551,
+    "low": 7227.499,
+    "volume": 11043139524,
+    "value": 13027168208972,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "LQ45",
+    "name": "LQ45",
+    "last": 903.462,
+    "change": -1.538,
+    "changePercent": -0.17,
+    "high": 907.076,
+    "low": 899.848,
+    "volume": 6826877252,
+    "value": 11558907281039,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "IDX30",
+    "name": "IDX30",
+    "last": 472.245,
+    "change": -2.755,
+    "changePercent": -0.58,
+    "high": 474.134,
+    "low": 470.356,
+    "volume": 8927095327,
+    "value": 12676620598109,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "IDXBUMN20",
+    "name": "IDX BUMN20",
+    "last": 389.374,
+    "change": -2.626,
+    "changePercent": -0.67,
+    "high": 390.931,
+    "low": 387.817,
+    "volume": 7732434061,
+    "value": 13019728989112,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "JII",
+    "name": "Jakarta Islamic Index",
+    "last": 531.696,
+    "change": 1.696,
+    "changePercent": 0.32,
+    "high": 533.823,
+    "low": 529.569,
+    "volume": 8579270630,
+    "value": 10499474990764,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "IDXFINANCE",
+    "name": "IDX Sektor Keuangan",
+    "last": 1486.068,
+    "change": 6.068,
+    "changePercent": 0.41,
+    "high": 1492.012,
+    "low": 1480.124,
+    "volume": 10668446609,
+    "value": 8733903598677,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "IDXENERGY",
+    "name": "IDX Sektor Energi",
+    "last": 2373.336,
+    "change": -6.664,
+    "changePercent": -0.28,
+    "high": 2382.829,
+    "low": 2363.843,
+    "volume": 10386431630,
+    "value": 10996651743305,
+    "date": "2026-05-11"
+  },
+  {
+    "code": "IDXTECHNO",
+    "name": "IDX Sektor Teknologi",
+    "last": 4639.56,
+    "change": 39.56,
+    "changePercent": 0.86,
+    "high": 4658.118,
+    "low": 4621.002,
+    "volume": 6368912954,
+    "value": 13792329925064,
+    "date": "2026-05-11"
+  }
+]

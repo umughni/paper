@@ -1,0 +1,51 @@
+name: Scrape IDX data
+
+on:
+  schedule:
+    # 09:30 UTC ≈ 16:30 WIB — after the regular trading session closes.
+    - cron: '30 9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Trading date to scrape (YYYYMMDD, empty = latest)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: idx-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run scraper
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            node scripts/scrape.mjs --date=${{ github.event.inputs.date }}
+          else
+            node scripts/scrape.mjs
+          fi
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/; then
+            echo "No data changes."
+            exit 0
+          fi
+          git add data/
+          git commit -m "chore(data): update IDX snapshot $(date -u +%Y-%m-%d)"
+          git push
